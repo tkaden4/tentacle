@@ -4,17 +4,19 @@ A command line tool for performing service discovery on local networks.
 
 ### Usage
 ```
-tentacle SUBCOMMAND
+tentacle SUBCOMMAND [OPTIONS]
+
+OPTIONS
+    --verbose|-v                Verbose output
 
 SUBCOMMAND
-    serve   --name|-n <name> [--verbose|-v] [--ping-delay <timeout-s>] [--serve-time <serve-s>]
+    serve   --name|-n <name> [--][--ping-delay <timeout-s>] [--serve-time <serve-s>]
         --name|-n <name>            Name of the service, required
-        --verbose|-v                Verbose output
+        --port|-p <port>            Port to broadcast on
         --ping-delay <delay-s>      Time between pings (in seconds), defaults to 1s
         --serve-time <serve-s>      Time to broadcast service (in seconds), defaults to infinity
 
-    find    [--verbose|-v] [--timeout|-t <timeout-s>] [--json]
-        --verbose|-v                Verbose output
+    find    [--timeout|-t <timeout-s>] [--json]
         --json                      Output values in JSON format
         --timeout|-t <timeout-s>    Set timeout for finding services (in seconds), defaults to infinity
 ```
