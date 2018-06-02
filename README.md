@@ -53,7 +53,7 @@ we get the following message:
 
 ```
 ...
-Kaden's Service:192.168.0.101
+{ "name": "Kaden's Service", "ip":"192.168.0.101" }
 ```
 
 At this point, both the server and the client may be safely closed.
