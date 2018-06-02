@@ -45,7 +45,6 @@ to find any available services on the network.
 
 ```
 [user2]> tentacle find --json
-Looking for services on local network...
 ```
 
 Once the client has received a broadcast message from the service provider,
