@@ -3,7 +3,7 @@
 A command line tool for performing service discovery on local networks.
 
 ### Usage
-````
+```
 tentacle SUBCOMMAND
 
 SUBCOMMAND
