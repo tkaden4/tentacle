@@ -35,7 +35,7 @@ Let's say we want to start a service called "Kaden's Service". We start by
 typing the following command into the terminal:
 
 ```
-[user]> tentacle serve --name "Kaden's Service --verbose"
+[user]> tentacle serve --name "Kaden's Service" --verbose
 Service "Kaden's Service" started on 192.168.0.101
 Listening...
 ```
