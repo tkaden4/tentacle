@@ -47,7 +47,7 @@ fn tentacle(args: clap::ArgMatches) -> Result<(), String> {
             .ok_or("NAME not supplied".to_owned())?;
 
         let options = ServeOptions {
-            name: "service".into(),
+            name: service_name.to_owned(),
             port: port,
             ping_delay: ping_delay,
             serve_time: serve_time

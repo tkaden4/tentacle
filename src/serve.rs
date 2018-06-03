@@ -31,16 +31,13 @@ pub fn serve(options: ServeOptions) -> io::Result<()> {
     sock.set_broadcast(true)?;
 
     let start_time = Instant::now();
+    let message = MessageBuilder::<String>::new()
+        .payload(options.name)
+        .build();
+    let message_str = serde_json::to_string(&message)
+        .unwrap();
     while Instant::now() - start_time < options.serve_time {
-        let message = MessageBuilder::<String>::new()
-            .build();
-        let message_str = serde_json::to_string(&message)
-            .unwrap();
-
-        println!("{}", message_str);
-
         sock.send_to(message_str.as_bytes(), (info.broadcast, options.port))?;
-
         thread::sleep(options.ping_delay);
     }
 
